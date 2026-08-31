@@ -21,9 +21,7 @@
     --radius: 12px;
     --shadow: 0 4px 24px rgba(0,0,0,0.35);
   }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
   body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background: var(--bg);
@@ -31,7 +29,6 @@
     min-height: 100vh;
     line-height: 1.5;
   }
-
   .header {
     background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     border-bottom: 1px solid var(--border);
@@ -43,286 +40,119 @@
     top: 0;
     z-index: 1000;
   }
-  .header-left {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
+  .header-left { display: flex; align-items: center; gap: 14px; }
   .logo {
-    width: 40px;
-    height: 40px;
+    width: 40px; height: 40px;
     background: linear-gradient(135deg, #3b82f6, #8b5cf6);
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; align-items: center; justify-content: center;
     font-size: 1.3rem;
   }
-  .header h1 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: -0.02em;
-  }
-  .header .subtitle {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    font-weight: 400;
-  }
+  .header h1 { font-size: 1.25rem; font-weight: 700; color: #ffffff; letter-spacing: -0.02em; }
+  .header .subtitle { font-size: 0.8rem; color: var(--text-muted); font-weight: 400; }
   .total-badge {
-    background: var(--surface-2);
-    border: 1px solid var(--border);
-    padding: 8px 18px;
-    border-radius: 999px;
-    font-size: 0.95rem;
-    color: var(--text);
+    background: var(--surface-2); border: 1px solid var(--border);
+    padding: 8px 18px; border-radius: 999px; font-size: 0.95rem; color: var(--text);
   }
-  .total-badge strong {
-    color: #60a5fa;
-    font-weight: 700;
-    margin-left: 4px;
-  }
-
+  .total-badge strong { color: #60a5fa; font-weight: 700; margin-left: 4px; }
   .container {
-    display: grid;
-    grid-template-columns: 360px 1fr;
-    gap: 20px;
-    padding: 20px;
-    max-width: 1600px;
-    margin: 0 auto;
+    display: grid; grid-template-columns: 360px 1fr; gap: 20px;
+    padding: 20px; max-width: 1600px; margin: 0 auto;
     height: calc(100vh - 77px);
   }
-
-  .sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    overflow-y: auto;
-    padding-right: 4px;
-  }
+  .sidebar { display: flex; flex-direction: column; gap: 16px; overflow-y: auto; padding-right: 4px; }
   .sidebar::-webkit-scrollbar { width: 6px; }
   .sidebar::-webkit-scrollbar-track { background: transparent; }
   .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-
   .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 18px;
-    box-shadow: var(--shadow);
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow);
   }
   .card-title {
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--text-muted);
-    margin-bottom: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 14px;
+    display: flex; align-items: center; gap: 8px;
   }
-  .card-title span.icon { font-size: 1rem; }
-
   table { width: 100%; border-collapse: collapse; }
   th {
-    text-align: left;
-    padding: 10px 8px;
-    font-size: 0.72rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--text-muted);
+    text-align: left; padding: 10px 8px; font-size: 0.72rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted);
     border-bottom: 1px solid var(--border);
   }
-  td {
-    padding: 10px 8px;
-    border-bottom: 1px solid rgba(45, 58, 79, 0.6);
-    vertical-align: middle;
-  }
+  td { padding: 10px 8px; border-bottom: 1px solid rgba(45, 58, 79, 0.6); vertical-align: middle; }
   tr:last-child td { border-bottom: none; }
-  .province-name {
-    font-weight: 500;
-    color: #e2e8f0;
-    font-size: 0.92rem;
-  }
+  .province-name { font-weight: 500; color: #e2e8f0; font-size: 0.92rem; }
   input[type="number"] {
-    width: 100px;
-    padding: 8px 10px;
-    background: var(--surface-2);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    color: #ffffff;
-    font-size: 0.92rem;
-    font-weight: 600;
-    font-family: inherit;
-    text-align: right;
+    width: 100px; padding: 8px 10px; background: var(--surface-2);
+    border: 1px solid var(--border); border-radius: 8px; color: #ffffff;
+    font-size: 0.92rem; font-weight: 600; font-family: inherit; text-align: right;
     transition: border-color 0.2s, box-shadow 0.2s;
   }
   input[type="number"]:focus {
-    outline: none;
-    border-color: var(--accent);
+    outline: none; border-color: var(--accent);
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
   }
-
-  .palette-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
+  .palette-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .palette-btn {
-    padding: 12px 10px;
-    background: var(--surface-2);
-    border: 2px solid transparent;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-align: center;
+    padding: 12px 10px; background: var(--surface-2); border: 2px solid transparent;
+    border-radius: 10px; cursor: pointer; transition: all 0.2s; text-align: center;
   }
-  .palette-btn:hover {
-    background: #2a3a52;
-    border-color: #3d4f6a;
-  }
-  .palette-btn.active {
-    border-color: var(--accent);
-    background: rgba(59, 130, 246, 0.12);
-  }
-  .swatch {
-    display: flex;
-    height: 12px;
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: 8px;
-  }
+  .palette-btn:hover { background: #2a3a52; border-color: #3d4f6a; }
+  .palette-btn.active { border-color: var(--accent); background: rgba(59, 130, 246, 0.12); }
+  .swatch { display: flex; height: 12px; border-radius: 4px; overflow: hidden; margin-bottom: 8px; }
   .swatch span { flex: 1; }
-  .palette-label {
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: #cbd5e1;
-  }
+  .palette-label { font-size: 0.75rem; font-weight: 500; color: #cbd5e1; }
   .palette-btn.active .palette-label { color: #93c5fd; }
-
   .actions { display: flex; flex-direction: column; gap: 8px; }
   button.action {
-    width: 100%;
-    padding: 11px 14px;
-    border: none;
-    border-radius: 9px;
-    font-size: 0.88rem;
-    font-weight: 600;
-    font-family: inherit;
-    cursor: pointer;
-    transition: all 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+    width: 100%; padding: 11px 14px; border: none; border-radius: 9px;
+    font-size: 0.88rem; font-weight: 600; font-family: inherit; cursor: pointer;
+    transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px;
   }
-  .btn-primary {
-    background: var(--accent);
-    color: #ffffff;
-  }
-  .btn-primary:hover {
-    background: var(--accent-hover);
-    transform: translateY(-1px);
-  }
-  .btn-secondary {
-    background: var(--surface-2);
-    color: #e2e8f0;
-    border: 1px solid var(--border);
-  }
-  .btn-secondary:hover {
-    background: #2a3a52;
-    border-color: #4a5d78;
-  }
-  .btn-outline {
-    background: transparent;
-    color: var(--text-muted);
-    border: 1px dashed var(--border);
-  }
-  .btn-outline:hover {
-    color: #e2e8f0;
-    border-color: #4a5d78;
-  }
-
-  .hint {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    margin-top: 12px;
-    line-height: 1.45;
-  }
-
+  .btn-primary { background: var(--accent); color: #ffffff; }
+  .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+  .btn-secondary { background: var(--surface-2); color: #e2e8f0; border: 1px solid var(--border); }
+  .btn-secondary:hover { background: #2a3a52; border-color: #4a5d78; }
+  .btn-outline { background: transparent; color: var(--text-muted); border: 1px dashed var(--border); }
+  .btn-outline:hover { color: #e2e8f0; border-color: #4a5d78; }
+  .hint { font-size: 0.75rem; color: var(--text-muted); margin-top: 12px; line-height: 1.45; }
   #map {
-    height: 100%;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-    min-height: 420px;
-    background: #1a2332;
+    height: 100%; border-radius: var(--radius); border: 1px solid var(--border);
+    box-shadow: var(--shadow); min-height: 420px; background: #1a2332;
   }
-
   .leaflet-control-zoom a {
-    background: var(--surface) !important;
-    color: var(--text) !important;
-    border-color: var(--border) !important;
+    background: var(--surface) !important; color: var(--text) !important; border-color: var(--border) !important;
   }
-  .leaflet-control-zoom a:hover {
-    background: var(--surface-2) !important;
-  }
+  .leaflet-control-zoom a:hover { background: var(--surface-2) !important; }
   .leaflet-control-attribution {
-    background: rgba(26, 35, 50, 0.85) !important;
-    color: var(--text-muted) !important;
-    font-size: 10px !important;
+    background: rgba(26, 35, 50, 0.85) !important; color: var(--text-muted) !important; font-size: 10px !important;
   }
   .leaflet-control-attribution a { color: #60a5fa !important; }
-
   .leaflet-tooltip {
-    background: #1e293b !important;
-    border: 1px solid #334155 !important;
-    color: #f1f5f9 !important;
-    font-family: Inter, sans-serif !important;
-    font-size: 0.85rem !important;
-    padding: 8px 12px !important;
-    border-radius: 8px !important;
+    background: #1e293b !important; border: 1px solid #334155 !important; color: #f1f5f9 !important;
+    font-family: Inter, sans-serif !important; font-size: 0.85rem !important;
+    padding: 8px 12px !important; border-radius: 8px !important;
     box-shadow: 0 4px 16px rgba(0,0,0,0.4) !important;
   }
-  .leaflet-tooltip-top:before {
-    border-top-color: #1e293b !important;
-  }
-
+  .leaflet-tooltip-top:before { border-top-color: #1e293b !important; }
   .legend {
-    background: var(--surface) !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 10px !important;
-    padding: 12px 14px !important;
-    color: #e2e8f0 !important;
-    font-family: Inter, sans-serif !important;
-    font-size: 0.78rem !important;
-    box-shadow: var(--shadow) !important;
-    line-height: 1.6 !important;
+    background: var(--surface) !important; border: 1px solid var(--border) !important;
+    border-radius: 10px !important; padding: 12px 14px !important; color: #e2e8f0 !important;
+    font-family: Inter, sans-serif !important; font-size: 0.78rem !important;
+    box-shadow: var(--shadow) !important; line-height: 1.6 !important;
   }
-  .legend strong {
-    color: #f8fafc !important;
-    font-size: 0.82rem;
-    display: block;
-    margin-bottom: 6px;
-  }
+  .legend strong { color: #f8fafc !important; font-size: 0.82rem; display: block; margin-bottom: 6px; }
   .legend i {
-    width: 16px;
-    height: 12px;
-    float: left;
-    margin-right: 8px;
-    margin-top: 3px;
-    border-radius: 2px;
-    opacity: 0.9;
+    width: 16px; height: 12px; float: left; margin-right: 8px; margin-top: 3px;
+    border-radius: 2px; opacity: 0.9;
   }
-
+  .loading {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    background: rgba(15,20,25,0.8); color: #94a3b8; font-size: 1rem; z-index: 500;
+    border-radius: var(--radius);
+  }
   @media (max-width: 960px) {
-    .container {
-      grid-template-columns: 1fr;
-      height: auto;
-      padding-bottom: 40px;
-    }
+    .container { grid-template-columns: 1fr; height: auto; padding-bottom: 40px; }
     #map { height: 480px; }
     .header { flex-direction: column; gap: 12px; text-align: center; }
   }
@@ -337,9 +167,7 @@
         <div class="subtitle">Live editable choropleth dashboard</div>
       </div>
     </div>
-    <div class="total-badge">
-      Total <strong id="totalValue">823.00</strong>
-    </div>
+    <div class="total-badge">Total <strong id="totalValue">823.00</strong></div>
   </header>
 
   <div class="container">
@@ -347,22 +175,15 @@
       <div class="card">
         <div class="card-title"><span class="icon">📊</span> Province Values</div>
         <table>
-          <thead>
-            <tr>
-              <th>Province</th>
-              <th style="text-align:right">Value</th>
-            </tr>
-          </thead>
+          <thead><tr><th>Province</th><th style="text-align:right">Value</th></tr></thead>
           <tbody id="dataTable"></tbody>
         </table>
         <p class="hint">Edit any value — map & legend update instantly.</p>
       </div>
-
       <div class="card">
         <div class="card-title"><span class="icon">🎨</span> Color Palette</div>
         <div class="palette-grid" id="paletteGrid"></div>
       </div>
-
       <div class="card">
         <div class="card-title"><span class="icon">⚡</span> Actions</div>
         <div class="actions">
@@ -372,14 +193,198 @@
         </div>
       </div>
     </aside>
-
-    <div id="map"></div>
+    <div style="position:relative">
+      <div id="map"></div>
+      <div class="loading" id="loading">Loading map data…</div>
+    </div>
   </div>
 
 <script>
-// Full content is too large for this tool call argument. Please download the local file or use a different hosting method.
-const provincesGeoJSON = {"type":"FeatureCollection","features":[]};
-console.error('GeoJSON not included due to size limits in this upload. Use the original HTML file.');
+const defaultData = {
+  "Koshi": 223.00, "Madhesh": 103.00, "Bagmati": 10.00,
+  "Gandaki": 216.00, "Lumbini": 189.00, "Karnali": 30.00, "Sudurpashchim": 52.00
+};
+let currentData = { ...defaultData };
+let currentPalette = "YlOrRd";
+let provincesGeoJSON = null;
+let map, geoLayer, legend;
+
+const nameMap = {
+  1: "Koshi", 2: "Madhesh", 3: "Bagmati", 4: "Gandaki",
+  5: "Lumbini", 6: "Karnali", 7: "Sudurpashchim"
+};
+
+const palettes = {
+  "YlOrRd": { name: "Warm", colors: ["#fff7bc","#fec44f","#fe9929","#d95f0e","#993404"] },
+  "YlGnBu": { name: "Ocean", colors: ["#ffffcc","#a1dab4","#41b6c4","#2c7fb8","#253494"] },
+  "RdYlGn": { name: "Traffic", colors: ["#d73027","#fc8d59","#fee08b","#91cf60","#1a9850"] },
+  "Blues": { name: "Blues", colors: ["#eff3ff","#bdd7e7","#6baed6","#3182bd","#08519c"] },
+  "Purples": { name: "Purples", colors: ["#f2f0f7","#cbc9e2","#9e9ac8","#756bb1","#54278f"] },
+  "Teal": { name: "Teal", colors: ["#f0fdfa","#99f6e4","#2dd4bf","#0d9488","#115e59"] },
+  "Sunset": { name: "Sunset", colors: ["#fef3c7","#fbbf24","#f97316","#dc2626","#7f1d1d"] },
+  "Viridis": { name: "Viridis", colors: ["#440154","#3b528b","#21918c","#5ec962","#fde725"] }
+};
+
+function getValues() { return Object.values(currentData); }
+function getMinMax() {
+  const vals = getValues();
+  return { min: Math.min(...vals), max: Math.max(...vals) };
+}
+function getColor(value) {
+  const { min, max } = getMinMax();
+  const colors = palettes[currentPalette].colors;
+  if (max === min) return colors[Math.floor(colors.length / 2)];
+  const ratio = Math.max(0, Math.min(1, (value - min) / (max - min)));
+  const idx = Math.min(Math.floor(ratio * (colors.length - 1)), colors.length - 2);
+  const t = (ratio * (colors.length - 1)) - idx;
+  return interpolateColor(colors[idx], colors[idx + 1], t);
+}
+function interpolateColor(a, b, t) {
+  const ah = parseInt(a.slice(1), 16), bh = parseInt(b.slice(1), 16);
+  const ar = (ah >> 16) & 0xff, ag = (ah >> 8) & 0xff, ab = ah & 0xff;
+  const br = (bh >> 16) & 0xff, bg = (bh >> 8) & 0xff, bb = bh & 0xff;
+  const r = Math.round(ar + (br - ar) * t);
+  const g = Math.round(ag + (bg - ag) * t);
+  const bl = Math.round(ab + (bb - ab) * t);
+  return "#" + ((1 << 24) + (r << 16) + (g << 8) + bl).toString(16).slice(1);
+}
+function updateTotal() {
+  document.getElementById("totalValue").textContent = getValues().reduce((a,b)=>a+b,0).toFixed(2);
+}
+function buildTable() {
+  const tbody = document.getElementById("dataTable");
+  tbody.innerHTML = "";
+  ["Koshi","Madhesh","Bagmati","Gandaki","Lumbini","Karnali","Sudurpashchim"].forEach(name => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td><span class="province-name">${name}</span></td>
+      <td style="text-align:right"><input type="number" step="0.01" min="0" value="${currentData[name]}" data-province="${name}" oninput="onValueChange(this)"></td>`;
+    tbody.appendChild(tr);
+  });
+}
+function onValueChange(input) {
+  let val = parseFloat(input.value);
+  if (isNaN(val) || val < 0) val = 0;
+  currentData[input.dataset.province] = val;
+  updateTotal();
+  updateMap();
+}
+function buildPaletteUI() {
+  const grid = document.getElementById("paletteGrid");
+  grid.innerHTML = "";
+  Object.keys(palettes).forEach(key => {
+    const p = palettes[key];
+    const btn = document.createElement("button");
+    btn.className = "palette-btn" + (key === currentPalette ? " active" : "");
+    btn.onclick = () => { currentPalette = key; buildPaletteUI(); updateMap(); };
+    const swatch = document.createElement("div");
+    swatch.className = "swatch";
+    p.colors.forEach(c => { const s = document.createElement("span"); s.style.background = c; swatch.appendChild(s); });
+    btn.appendChild(swatch);
+    const label = document.createElement("div");
+    label.className = "palette-label"; label.textContent = p.name;
+    btn.appendChild(label);
+    grid.appendChild(btn);
+  });
+}
+function style(feature) {
+  const name = feature.properties.name;
+  return {
+    fillColor: getColor(currentData[name] || 0),
+    weight: 1.8, opacity: 1, color: "#0f172a", fillOpacity: 0.88
+  };
+}
+function onEachFeature(feature, layer) {
+  const name = feature.properties.name;
+  layer.bindTooltip("", { sticky: true });
+  layer.on({
+    mouseover: e => {
+      const val = currentData[name] || 0;
+      e.target.setStyle({ weight: 3, color: "#ffffff", fillOpacity: 0.95 });
+      e.target.bringToFront();
+      e.target.setTooltipContent(`<div style="font-weight:600;font-size:0.95rem;margin-bottom:2px">${name}</div>
+         <div style="color:#94a3b8">Value: <span style="color:#60a5fa;font-weight:600">${val.toFixed(2)}</span></div>`);
+    },
+    mouseout: e => geoLayer.resetStyle(e.target)
+  });
+}
+function updateMap() {
+  if (!provincesGeoJSON || !map) return;
+  if (geoLayer) map.removeLayer(geoLayer);
+  geoLayer = L.geoJSON(provincesGeoJSON, { style, onEachFeature }).addTo(map);
+  if (legend) map.removeControl(legend);
+  legend = L.control({ position: "bottomright" });
+  legend.onAdd = function () {
+    const div = L.DomUtil.create("div", "legend");
+    const { min, max } = getMinMax();
+    const colors = palettes[currentPalette].colors;
+    let html = "<strong>Value Scale</strong>";
+    for (let i = 0; i < colors.length; i++) {
+      const from = min + (max - min) * (i / colors.length);
+      const to = min + (max - min) * ((i + 1) / colors.length);
+      html += `<br><i style="background:${colors[i]}"></i>${from.toFixed(0)} – ${to.toFixed(0)}`;
+    }
+    div.innerHTML = html;
+    return div;
+  };
+  legend.addTo(map);
+}
+function resetData() {
+  currentData = { ...defaultData };
+  buildTable(); updateTotal(); updateMap();
+}
+function randomizeData() {
+  Object.keys(currentData).forEach(k => currentData[k] = Math.round((Math.random()*250+5)*100)/100);
+  buildTable(); updateTotal(); updateMap();
+}
+function exportCSV() {
+  let csv = "Province,Value\n";
+  Object.entries(currentData).forEach(([k,v]) => csv += `${k},${v}\n`);
+  csv += `Total,${getValues().reduce((a,b)=>a+b,0)}\n`;
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([csv], {type:"text/csv"}));
+  a.download = "nepal_province_values.csv"; a.click();
+}
+
+async function loadGeoJSON() {
+  try {
+    const urls = [
+      "https://cdn.jsdelivr.net/gh/SurajMazar/geojson-nepal@master/province.geojson",
+      "https://raw.githubusercontent.com/SurajMazar/geojson-nepal/master/province.geojson"
+    ];
+    let data = null;
+    for (const url of urls) {
+      try {
+        const res = await fetch(url);
+        if (res.ok) { data = await res.json(); break; }
+      } catch(e) {}
+    }
+    if (!data) throw new Error("Could not load GeoJSON");
+    data.features.forEach(f => {
+      const code = f.properties.province_code;
+      f.properties.name = nameMap[code] || f.properties.province_name_en || "Unknown";
+    });
+    provincesGeoJSON = data;
+    document.getElementById("loading").style.display = "none";
+    updateMap();
+  } catch (err) {
+    document.getElementById("loading").textContent = "Failed to load map data. Check console.";
+    console.error(err);
+  }
+}
+
+function initMap() {
+  map = L.map("map", { zoomControl: true }).setView([28.25, 84.15], 7);
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    subdomains: "abcd", maxZoom: 18
+  }).addTo(map);
+  loadGeoJSON();
+}
+
+buildTable();
+buildPaletteUI();
+updateTotal();
+initMap();
 </script>
 </body>
 </html>
